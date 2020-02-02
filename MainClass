@@ -1,0 +1,18 @@
+#Get os command to change working directory
+import os
+#Set the path that you want to look for
+path = input("Enter dir EX: c:/test")
+os.chdir(path)
+#Set the filename your looking for
+filename = input("Enter filename:")
+#Set up file format
+ext = input("Enter file format ex .txt or .doc")
+filename = filename + ext
+#Set the string your looking for
+find = input("Enter text to find")
+#Open the file in read only mode
+f = open(filename, "r")
+#Look for all the lines in the file that contains the specified string and print it on the screen
+for item in f:
+    if find in item:
+        print(item.strip())
